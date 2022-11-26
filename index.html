@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de login</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <form name="formulario" method="post">
+        <div class="tela-login">
+            <h1>Login</h1>
+            <input type="text" placeholder="Nome" id="nome">
+            <br><br>
+            <input type="password" placeholder="Senha" id="senha">
+            <br><br>
+            <input type="submit" name="Enviar" onclick="acesso(); return false" id="enviar-btn">
+            <button type="reset">Cancelar</button>
+        </div>
+    </form>
+    <script>
+        function acesso() {
+            var nomeUsuario = document.getElementById("nome").value;
+            var senhaUsuario = document.getElementById("senha").value;
+            if (nomeUsuario == "jiulio" && senhaUsuario == "123"){
+                location.href = "boasVindas.html";
+            }
+            else{
+                alert("Usuário/Senha incorretos. Tente novamente.");
+            }
+        }
+    </script>
+</body>
+
+</html>
